@@ -8,20 +8,18 @@ This project is executed at the [Network Security group](https://netsec.ethz.ch/
 
 If you would like to join the upcoming Android user study or have other questions about the project, feel free to get in touch with the [PI](https://people.inf.ethz.ch/cgloor) .
 
-## Table of contents
-
-- [Trusted Introductions for the Signal private messenger](#trusted-introductions-for-the-signal-private-messenger)
-  - [Table of contents](#table-of-contents)
+##  Table of contents
   - [Project Description](#project-description)
   - [Ressources](#ressources)
     - [Android Download](#android-download)
-    - [Howto: Backup your Signal Data](#howto-backup-your-signal-data)
-    - [Howto: Install the APK](#howto-install-the-apk)
-    - [Howto: Transfer your Signal Data](#howto-transfer-your-signal-data)
-    - [Howto: Move back to a normal installation of Signal](#howto-move-back-to-a-normal-installation-of-signal)
-    - [Source Code: Android](#source-code-android)
-    - [Source Code: Telemetry Server](#source-code-telemetry-server)
-
+    - [HowTos](#howtos)
+      - [Backup your Signal Data](#backup-your-signal-data)
+      - [Install the modified application](#install-the-modified-application)
+      - [Transfer your Signal Data](#transfer-your-signal-data)
+      - [Move back to a normal installation of Signal](#move-back-to-a-normal-installation-of-signal)
+    - [Source Code](#source-code)
+      - [Android](#android)
+      - [Telemetry Server](#telemetry-server)
 
 ## Project Description
 TODO
@@ -29,21 +27,25 @@ TODO
 ## Ressources
 
 ### Android Download
-You can download the newest APK for Android mobile phones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) .
+You can download the newest APK for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) .
 
-### Howto: Backup your Signal Data
+### HowTos
+#### Backup your Signal Data
 TODO
 
-### Howto: Install the APK
+#### Install the modified application
 TODO
 
-### Howto: Transfer your Signal Data
+#### Transfer your Signal Data
 TODO
 
-### Howto: Move back to a normal installation of Signal
+#### Move back to a normal installation of Signal
 
-### Source Code: Android
+### Source Code
 TODO
 
-### Source Code: Telemetry Server
+#### Android
+TODO
+
+#### Telemetry Server
 TODO
