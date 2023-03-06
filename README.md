@@ -10,7 +10,18 @@ If you would like to join the upcoming Android user study or have other question
 
 ## Table of contents
 
-[[_TOC_]]
+- [Trusted Introductions for the Signal private messenger](#trusted-introductions-for-the-signal-private-messenger)
+  - [Table of contents](#table-of-contents)
+  - [Project Description](#project-description)
+  - [Ressources](#ressources)
+    - [Android Download](#android-download)
+    - [Howto: Backup your Signal Data](#howto-backup-your-signal-data)
+    - [Howto: Install the APK](#howto-install-the-apk)
+    - [Howto: Transfer your Signal Data](#howto-transfer-your-signal-data)
+    - [Howto: Move back to a normal installation of Signal](#howto-move-back-to-a-normal-installation-of-signal)
+    - [Source Code Android](#source-code-android)
+    - [Source Code Telemetry Server](#source-code-telemetry-server)
+
 
 ## Project Description
 TODO
