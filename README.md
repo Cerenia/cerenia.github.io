@@ -10,7 +10,7 @@ If you would like to join the upcoming Android user study or have other question
 
 ## Table of contents
 
-[[TOC]]
+[[_TOC_]]
 
 ## Project Description
 TODO
