@@ -8,7 +8,9 @@ This project is executed at the [Network Security group](https://netsec.ethz.ch/
 
 If you would like to join the upcoming Android user study or have other questions about the project, feel free to get in touch with the [PI](https://people.inf.ethz.ch/cgloor) .
 
-[[_TOC_]]
+## Table of contents
+
+[[TOC]]
 
 ## Project Description
 TODO
