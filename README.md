@@ -19,8 +19,8 @@ If you would like to join the upcoming Android user study or have other question
     - [Howto: Install the APK](#howto-install-the-apk)
     - [Howto: Transfer your Signal Data](#howto-transfer-your-signal-data)
     - [Howto: Move back to a normal installation of Signal](#howto-move-back-to-a-normal-installation-of-signal)
-    - [Source Code Android](#source-code-android)
-    - [Source Code Telemetry Server](#source-code-telemetry-server)
+    - [Source Code: Android](#source-code-android)
+    - [Source Code: Telemetry Server](#source-code-telemetry-server)
 
 
 ## Project Description
@@ -42,8 +42,8 @@ TODO
 
 ### Howto: Move back to a normal installation of Signal
 
-### Source Code Android
+### Source Code: Android
 TODO
 
-### Source Code Telemetry Server
+### Source Code: Telemetry Server
 TODO
