@@ -27,7 +27,32 @@ TODO
 ## Ressources
 
 ### Android Download
-You can download the newest APK for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) .
+You can download the newest APK for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) . Your smartphone will warn you that the file may be harmful. This is because Android expects all applications to be downloaded via. the Google Play store. Since this is coming directly from us and not through the store, Google did not check the file for malicious code and hence you see the warning. It is safe to download the file anyway. 
+
+![](fig/may-be-harmful.jpg)
+
+#### **Which file is right for my phone?**
+
+##### TLDR;
+
+You can simply try to install the files in the following order:
+1. _arm64_v8a_
+2. _x86_64_
+3. (if your phone is very old, _armeabi-v7a_ or _x86_)
+4. if all else fails: _universal_, this should work with any phone but will use more storage
+
+On if it fails, your phone will simply tell you that Signal could not be installed and you can move to the next file.
+
+![](fig/want-install.jpg)
+![](fig/installing.jpg)
+![](fig/not-installed.jpg)
+
+##### More information:
+
+The correct file will depend on the processor type that is in your smartphone. The different names denote different _instruction sets_ that a processor might use. Most commonly, Android phones use the ARM CPU architecture, more rarely, you might find an x86 architecture. 
+You can google for your processor and then find which CPU cores it contains.
+The more direct way is through a third party app, as this information is not commonly listed in the native Android settings. For example, [DevCheck](https://play.google.com/store/apps/details?id=flar2.devcheck) easily exposes what kind of CPUs the processor contains. 
+After finding the type of CPU, you will still need to google for the instruction set they use.
 
 ### HowTos
 #### Backup your Signal Data
