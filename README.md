@@ -43,6 +43,12 @@ You can simply try to install the files in the following order:
 
 On if it fails, your phone will simply tell you that Signal could not be installed and you can move to the next file.
 
+
+|  |  |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 ![](fig/want-install.jpg)
 ![](fig/installing.jpg)
 ![](fig/not-installed.jpg)
