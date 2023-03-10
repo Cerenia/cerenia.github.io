@@ -9,17 +9,26 @@ This project is executed at the [Network Security group](https://netsec.ethz.ch/
 If you would like to join the upcoming Android user study or have other questions about the project, feel free to get in touch with the [PI](https://people.inf.ethz.ch/cgloor) .
 
 ##  Table of contents
+
   - [Project Description](#project-description)
+  - [Considerations before installing the application](#considerations-before-installing-the-application)
   - [Ressources](#ressources)
-    - [Android Download](#android-download)
     - [HowTos](#howtos)
-      - [Backup your Signal Data](#backup-your-signal-data)
+      - [**Backup your Signal Data**](#backup-your-signal-data)
       - [Install the modified application](#install-the-modified-application)
       - [Transfer your Signal Data](#transfer-your-signal-data)
+        - [Relink your connected devices](#relink-your-connected-devices)
+      - [How to use the new feature:](#how-to-use-the-new-feature)
       - [Move back to a normal installation of Signal](#move-back-to-a-normal-installation-of-signal)
+    - [Android Download](#android-download)
+      - [**Which file is right for my phone?**](#which-file-is-right-for-my-phone)
+        - [TLDR;](#tldr)
+        - [More information:](#more-information)
     - [Source Code](#source-code)
       - [Android](#android)
       - [Telemetry Server](#telemetry-server)
+
+
 
 ## Project Description
 TODO
@@ -42,7 +51,7 @@ Open Signal on your Android smartphone and navigate to the settings, from there 
 | ------------- | ------------- |
 | ![](fig/Android-Settings-Nav.jpg)  | ![](fig/Android-Account-Settings-Dark.jpg)  |
 
-From here, navigate to "Chat backups" and turn on backups. You will now be asked to choose a location on your smartphone for signal to store you backups in. Choose a folder and make sure to note which one it is. 
+From here, navigate to "Chat backups" and turn on backups. You will now be asked to choose a location on your smartphone for Signal to store you backups in. Choose a folder and make sure to note which one it is. 
 
 **Please be aware that you will need a significant amount of free storage on your smartphone if Signal is your main messaging application, since the backups will include all the media sent and received through the application. While testing we got backups that were a few GB in size. This will depend on the content of your chats. For example, your backup will be significantly larger if you send a lot of video through the application.**
 
@@ -59,19 +68,70 @@ Once backups are turned on, you can force an immediate backup by tapping "Create
 Once the backup is completed, we suggest immediately copying it and storing a second copy somewhere, for example on your laptop.
 
 #### Install the modified application
-TODO
+
+Before installing the modified application make sure that you have a working backup of your data and the corresponding passphrase. You can check that this is the case through the Signal application. Navigate to the "Chat backups" screen and tap "Verify backup passphrase", the application will let you know if you have the correct passphrase or not. If you don't succed, turn off backups and redo all the backup steps to create a new backup and passphrase.
+
+|  |  |  |  |
+| ------------- | ------------- | ------------- | ------------- |
+| ![](fig/Android-Create-Backup.png)  | ![](fig/Android-Backup-Passphrase-Verify.png)  | ![](fig/Android-Chat-Backup-passphrase-verify-correct.png)  | ![](fig/Android-Backup-Passphrase-Verify-wrong.png)   |
+
+Once you are certain that you have a working backup and passphrase, download the application and install it as described in the [Android Download](#android-download) section.
 
 #### Transfer your Signal Data
-TODO
+Once you have successfully installed the APK you will need to load the data out of your backup into the modified application and reregister your mobile phone number with your account (and maybe your Signal PIN if you had registration lock enabled).
+When opening the modified application for the first time, give it the permissions it needs to function like you did when installing the unmodified Signal application, and navigate to "Transfer or restore account".
+
+|  |  |  |  |
+| ------------- | ------------- | ------------- | ------------- |
+| ![](fig/Android-Transfer-Account-Nav.png)  | ![](fig/Android-Signal-Permissions_1.png)  | ![](fig/Android-Signal-Permissions_2.png)  | ![](fig/Android-Signal-Permissions_3.png)   |
+
+From there pick "Restore from backup", choose the backup file tap "Restore backup" and input your passphrase. If you have the correct passphrase, a progress indicator will appear. If you make a mistake the application will tell you and you can try again.
+
+|  |  |  |  |
+| ------------- | ------------- | ------------- | ------------- |
+| ![](fig/Android-Restore-from-Backup-nav.png)  | ![](fig/Android-Restore-from-Backup.png)  | ![](fig/Android-Restore-Progress.png)  | ![](fig/Android-Restore-Incorrect-Passphrase.png)   |
+
+After your data is loaded, you may set a folder to store backups in. It does not matter if you do this now or leave it for later when you want to transfer back to a normal installation of Signal. Afterwards, you will need to reregister with your phone number as you did when you first installed the Signal application. This is where you will need your PIN if you had registration lock enabled. Be careful here, as inputting your PIN wrong too many times will temporarily lock you out of your account.
+
+|  |  |
+| ------------- | ------------- |
+| ![](fig/Android-Backup-Folder.png)  | ![](fig/Android-Enter-Phone-Nr.png)  |
 
 ##### Relink your connected devices
 
- For this you will need to clear the data out of your desktop
+ If you used the Signal desktop client, you will notice that it is no longer linked to your account after restoring the backup. In order to relink your device, you will need to first clear the data out of the desktop client. 
+In the desktop client, navigate to the preferences, then open the "Privacy" Section and tap on "Clear data" twice.
+
+|  |  |
+| ------------- | ------------- |
+| ![](fig/Desktop-Preferences.png)  | ![](fig/Desktop-Delete-All-Data.png)  |
+
+This will open a loading screen while it disconnects and clears data. If you use Signal regularly, it is normal for this process to take a while (in the ballpark of 15mins).
+
+![](fig/Desktop-Disconnecting.png) 
+
+When this process is done you will be shown a QR-Code in the desktop client. 
+
+![](fig/Desktop-QR.png) 
+
+In your smartphone, navigate to the "settings" and "Linked devices" and tap the + icon to scan the code on your desktop and link the devices again. 
+
+|  |  |  |
+| ------------- | ------------- | ------------- |
+| ![](fig/Android-Settings-Nav.png)  | ![](fig/Android-Account-Settings-Dark.png)  | ![](fig/Android-No-Devices-Linked.png)  |
+
+After scanning the code the desktop client will display a progress bar until the synchronisation is complete. 
+
+![](fig/Desktop-sync.png)
 
 
- "Disconnecting and deleting all data" => may take a while (10ish mins? Can you just close the window?)
+#### How to use the new feature:
+
+TODO
 
 #### Move back to a normal installation of Signal
+
+TODO:
 
 ### Android Download
 You can download the newest APK for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) . Your smartphone will warn you that the file may be harmful. This is because Android expects all applications to be downloaded via. the Google Play store. Since this is coming directly from us and not through the store, Google did not check the file for malicious code and hence you see the warning. It is safe to download the file anyway. 
