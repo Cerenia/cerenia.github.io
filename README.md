@@ -24,11 +24,19 @@ If you would like to join the upcoming Android user study or have other question
 ## Project Description
 TODO
 
+## Considerations before installing the application
+
+- This process will require creating and restoring from backups. To store the data, your smartphone will need some free storage space (at least 2x as much as your Signal data is using).
+- dataloss may occur if backup process is not done correctly
+- chat history will be lost on the desktop client when relinking to the device now running the modified application
+- if you have registration lock enabled, you MUST know your PIN before attempting to transfer your data or you may lock yourself out of your account for a week. If you don't know your PIN, disable registration lock and optionally reenable it while carefully saving your PIN.
+- telemetry data will be sent to researchers (TODO: not yet part of the APK)
+
 ## Ressources
 
 ### HowTos
 #### **Backup your Signal Data**
-Open Signal on your Android Smartphone and navigate to the settings, from there open the "Chats" setting.
+Open Signal on your Android smartphone and navigate to the settings, from there open the "Chats" setting.
 
 |  |  |
 | ------------- | ------------- |
@@ -42,7 +50,7 @@ From here, navigate to "Chat backups" and turn on backups. You will now be asked
 | ------------- | ------------- | ------------- |
 | ![](fig/Android-Settings-Chat.png)  | ![](fig/Android-TurnOn-ChatBackups.png)  | ![](fig/Android-Backup-Folder.png)  |
 
-Once backups are turned on, you can force an immediate backup by pressing "Create backup". The next screen will show you the backup passphrase. You can copy it into the clipboard by long pressing on the passphrase. **Make sure that you save this passphrase carefully, it is needed to decrypt your backup file. If you loose it, there is no way to restore it and your backups will not be usable.** On success, a progress bar will appear.
+Once backups are turned on, you can force an immediate backup by tapping "Create backup". The next screen will show you the backup passphrase. You can copy it into the clipboard by long tapping on the passphrase. **Make sure that you save this passphrase carefully, it is needed to decrypt your backup file. If you loose it, there is no way to restore it and your backups will not be usable.** On success, a progress bar will appear.
 
 |  |  |  |
 | ------------- | ------------- | ------------- |
