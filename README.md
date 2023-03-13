@@ -89,7 +89,7 @@ Be aware that if you have registration lock enabled, you MUST know your PIN befo
 Once you are certain that you have a working backup and passphrase and that you know your PIN or the PIN is disabled, you can download the modified application and install it as described in the [Android Download](#android-download) section.
 
 #### **Transfer your Signal Data**
-Once you have successfully installed the APK you will need to load the data out of your backup into the modified application and reregister your mobile phone number with your account (and maybe your Signal PIN if you had registration lock enabled).
+Once you have successfully installed the APK you will need to load the data out of your backup into the modified application and reregister your mobile phone number with your account (and maybe input your Signal PIN if it was enabled).
 When opening the modified application for the first time, give it the permissions it needs to function like you did when installing the unmodified Signal application, and navigate to "Transfer or restore account".
 
 |  |  |  |  |
@@ -102,7 +102,7 @@ From there pick "Restore from backup", choose the backup file tap "Restore backu
 | ------------- | ------------- | ------------- | ------------- |
 | ![](fig/Android-Restore-from-Backup-nav.png)  | ![](fig/Android-Restore-from-Backup.png)  | ![](fig/Android-Restore-Progress.png)  | ![](fig/Android-Restore-Incorrect-Passphrase.png)   |
 
-After your data is loaded, you may set a folder to store backups in. It does not matter if you do this now or leave it for later when you want to transfer back to a normal installation of Signal. Afterwards, you will need to reregister with your phone number as you did when you first installed the Signal application. This is where you will need your PIN if you had registration lock enabled. Be careful here, as inputting the wrong PIN too many times will temporarily lock you out of your account.
+After your data is loaded, you may set a folder to store backups in. It does not matter if you do this now or leave it for later when you want to transfer back to a normal installation of Signal. Afterwards, you will need to reregister with your phone number as you did when you first installed the Signal application. This is where you may need your PIN. Be careful here if you had registration lock enabled, as inputting the wrong PIN too many times will temporarily lock you out of your account.
 
 |  |  |
 | ------------- | ------------- |
@@ -110,7 +110,7 @@ After your data is loaded, you may set a folder to store backups in. It does not
 
 ##### **Relink your connected devices**
 
- If you used the Signal desktop client, you will notice that it is no longer linked to your account after restoring the backup. In order to relink your device, you will need close the desktop application and reopen for a relink banner to appear. **Note: it may take some time after you loaded your backup into your mobile and more than one restart of the desktop application for this banner to appear.**
+ If you used the Signal desktop client, you will notice that it is no longer linked to your account after restoring the backup. In order to relink your device, you will need close the desktop application and reopen for the "Unlinked" banner to appear. **Note: it may take some time after you loaded your backup into your mobile phone and more than one restart of the desktop application for this banner to appear.**
 
  |  |  |
 | ------------- | ------------- |
@@ -136,26 +136,26 @@ This logo indicates the trusted introductions feature:
 
 ![](fig/TI-logo.png)
 
-You will also notice that there are now more verification states, and that these states are now always shown below the avatar and name of your counterparty in the conversation view. Your contacts can have one of these verification states:
+You will also notice that there are now more verification states, and that these states are always shown below the avatar and name of your counterparty in the conversation view. Your contacts can have one of these verification states:
 
-- _**Unverified**_ if you have either never changed interacted with this contacts verified status before or have specifically set it to unverified, either manually by tapping "clear verification" in the "View safety number screen" or through rejecting all introductions that you got for this contact.
-- _**Manually Verified**_ if you have tapped the "set manually verified" button on the "Verify safety number" screen. This is the weakest form of verification and does not unlock any trusted-introductions feature for this contact.
+- _**Unverified**_ if you have either never interacted with this contacts verified state before or have specifically set it to unverified, either manually by tapping "clear verification" in the "View safety number screen" or through rejecting all introductions that you got for this contact.
+- _**Manually Verified**_ if you have tapped the "set manually verified" button on the "Verify safety number" screen. This is the weakest form of verification and does not unlock any trusted-introductions features for this contact.
 - _**QR Verified**_ indicating that you have scanned the QR code in the "View safety number" screen of your conversation.
 - _**Introduced**_ indicating that you have accepted an introduction for this contact.
 - _**Strongly verified**_ indicating that you have scanned the QR code and accepted at least one introduction for this contact.
 
 You can initiate an introduction the same way you would forward a contact, in the menu which pops up when tapping the "+" in the conversation view.
-Please be aware that you can only introduce people to someone that you have either directly verified by scanning the QR-code, or have accepted an introduction for. Additionally, you can only introduce contacts for which you have directly scanned the conversation QR-code of. The application will let you know if you are trying to do something that is now allowed and will tell you how to remedy it.
+Please be aware that you can only introduce people to someone that you have either directly verified by scanning the QR-code, or have accepted an introduction for. Additionally, you can only introduce contacts for which you have directly scanned the conversation QR-code of. The application will let you know if you are trying to do something that is not allowed and will tell you how to remedy it.
 
 |  |  |
 | ------------- | ------------- |
 | ![](fig/Android-Initiate-Introduction.png)  | ![](fig/Android-Introduction-not-possible.png) |
 
-Once you have contacts that have a strong enough verification status, you will be able to choose which _QR Verified_ or _Strongly Verified_ contacts you want to introduce.
+Once you have contacts that have a strong enough verification state, you will be able to choose which _QR Verified_ or _Strongly Verified_ contacts you want to introduce.
 
  ![](fig/Android-introduce-contacts.png)
 
- After someone sent you introductions, you can navigate to the management screen by tapping on their profile picture, then "Trusted Introductions". Here you can interact with the introductions that this contact has forwarded to you or navigate to the screen which shows all the introductions you have received.
+ After someone sent you an introduction, you can navigate to the management screen by tapping on their profile picture, then "Trusted Introductions". Here you can interact with the introductions that this contact has forwarded to you or navigate to the screen which shows all the introductions you have received.
 
 |  |  |  |
 | ------------- | ------------- | ------------- |
@@ -163,9 +163,11 @@ Once you have contacts that have a strong enough verification status, you will b
 
 TODO: Rework when the last cosmetic changes have been added to the application (banner with direct navigation, additional navigation to introduction management screen, header for all screen...), also short paragraph on different introduction states? (e.g., when are they stale)
 
+TODO: What about in app updates? 
+
 #### **Move to a new version of the APK**
 
-In this case, you will not need to export and import your data since you should be able to simply do an update with the new APK. We still recommend making sure that you have a working backup before you do this, in case something unexpectedly goes wrong. Follow the steps detailed at [**Backup your Signal Data**](#backup-your-signal-data) and [**Verify your backup**](#verify-your-backup) to make sure you have a fallback option.
+In this case, you will not need to export and import your data since you can simply do an update with the new APK. We still recommend making sure that you have a working backup before you do this, in case something unexpectedly goes wrong. Follow the steps detailed at [**Backup your Signal Data**](#backup-your-signal-data), [**Verify your backup**](#verify-your-backup) and [**Verify your PIN**](#verify-your-pin) to make sure you have a fallback option available.
 
 Now, download the newest version of the APK that is compatible with your smartphone (see - [**Which of the five files is right for my phone?**](#which-of-the-five-files-is-right-for-my-phone)), and open it. You may have to grant the "install unknown apps" permission as detailed in the [**TLDR;**](#tldr) chapter.
 
@@ -175,11 +177,11 @@ Now, download the newest version of the APK that is compatible with your smartph
 
 #### **Move back to a normal installation of Signal**
 
-This process is very similar to what you did to move from a normal installation to the modified application. The only difference is that you will have two backup files to choose from. The one labeled with "trusted-introductions" is compatible with the modified application, while the file without this text is compatible with the normal Signal application. Both files are encrypted with the same passphrase. Simply follow the steps detailed in [**Backup your Signal Data**](#backup-your-signal-data) and [**Transfer your Signal Data**](#transfer-your-signal-data) again and make sure that you use the correct file when reloading from your backup. **If you try to import a "trusted-introductions" backup, the unmodified Signal application will crash, since it does not know how to handle the introductions and extended verification states. If this happens, reinstall the application and use the correct backup file when you try again.**
-The backup will collapse all the different verified states (QR Verified, Introduced, Strongly Verified or Manually Verified) to the single "verified" state.
+This process is very similar to what you did to move from a normal installation to the modified application. The only difference is that you will have two backup files to choose from. The one labeled with "trusted-introductions" is compatible with the modified application, while the file without this text is compatible with the normal Signal application. Both files are encrypted with the same passphrase. Follow the steps detailed in [**Backup your Signal Data**](#backup-your-signal-data), [**Verify your PIN**](#verify-your-pin) and [**Transfer your Signal Data**](#transfer-your-signal-data) again and make sure that you use the correct file when reloading from your backup. **If you try to import a "trusted-introductions" backup, the unmodified Signal application will crash, since it does not know how to handle the introductions and extended verification states. If this happens, uninstall and reinstall the application from the PlayStore and use the correct backup file when you try again.**
+The backup will collapse all the different verified states (_QR Verified_, _Introduced_, _Strongly Verified_ or _Manually Verified_) to the single "verified" state in the original application.
 
 ### **Android Download**
-You can download the newest APKs for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) . When downloading the files, your smartphone will warn you that the file may be harmful. This is because Android expects all applications to be downloaded via. the Google Play store. Since this is coming directly from us and not through the store, Google did not check the file for malicious code and hence you see the warning. It is safe to download the file anyway. 
+You can download the newest APKs for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) . When downloading the files, your smartphone will warn you that the file may be harmful. This is because Android expects all applications to be downloaded via. the Google PlayStore. Since this is coming directly from us and not through the store, Google did not check the file for malicious code and hence you see the warning. It is safe to download the file anyway. 
 
 ![](fig/may-be-harmful.jpg)
 
@@ -199,7 +201,7 @@ If the version of Signal you are running on your smartphone is newer than the Si
 
 ##### **TLDR;**
 
-Before doing anything, **make sure that you have backed up your chats before you do this, or you may loose all of your data irreversibly!** You can do this by following the instructions in chapters [**Backup your Signal Data**](#backup-your-signal-data) and [**Verify your backup**](#verify-your-backup) and [**Verify your PIN**](#verify-your-pin).
+Before doing anything, **make sure that you have backed up your chats, or you may loose all of your data irreversibly!** You can do this by following the instructions in chapters [**Backup your Signal Data**](#backup-your-signal-data) and [**Verify your backup**](#verify-your-backup) and [**Verify your PIN**](#verify-your-pin).
 
 After having backed up and verified your data, you must uninstall your current version of Signal.
 
