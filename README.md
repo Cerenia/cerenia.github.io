@@ -15,14 +15,14 @@ If you would like to join the upcoming Android user study or have other question
   - [**Ressources**](#ressources)
     - [**HowTos**](#howtos)
       - [**Backup your Signal Data**](#backup-your-signal-data)
-      - [**Install the modified application**](#install-the-modified-application)
+      - [**Verify your backup**](#verify-your-backup)
       - [**Transfer your Signal Data**](#transfer-your-signal-data)
         - [**Relink your connected devices**](#relink-your-connected-devices)
       - [**Use Trusted Introductions**](#use-trusted-introductions)
       - [**Move to a new version of the APK**](#move-to-a-new-version-of-the-apk)
       - [**Move back to a normal installation of Signal**](#move-back-to-a-normal-installation-of-signal)
     - [**Android Download**](#android-download)
-      - [**Which file is right for my phone?**](#which-file-is-right-for-my-phone)
+      - [**Which of the five files is right for my phone?**](#which-of-the-five-files-is-right-for-my-phone)
         - [**TLDR;**](#tldr)
         - [**More information**](#more-information)
     - [**Source Code**](#source-code)
@@ -119,15 +119,48 @@ After scanning the code the desktop client will display a progress bar until the
 | ![](fig/Desktop-QR.png)  | ![](fig/Desktop-sync.png) |
 
 
-
 #### **Use Trusted Introductions**
 
-TODO
+This logo indicates the trusted introductions feature:
+
+![](fig/TI-logo.png)
+
+You will also notice that there are now more verification states, and that these states are now always shown below the avatar and name of your counterparty in the conversation view. Your contacts can have one of these verification states:
+
+- _**Unverified**_ if you have either never changed interacted with this contacts verified status before or have specifically set it to unverified, either manually by tapping "clear verification" in the "View safety number screen" or through rejecting all introductions that you got for this contact.
+- _**Manually Verified**_ if you have tapped the "set manually verified" button on the "Verify safety number" screen. This is the weakest form of verification and does not unlock any trusted-introductions feature for this contact.
+- _**QR Verified**_ indicating that you have scanned the QR code in the "View safety number" screen of your conversation.
+- _**Introduced**_ indicating that you have accepted an introduction for this contact.
+- _**Strongly verified**_ indicating that you have scanned the QR code and accepted at least one introduction for this contact.
+
+You can initiate an introduction the same way you would forward a contact, in the menu which pops up when tapping the "+" in the conversation view.
+Please be aware that you can only introduce people to someone that you have either directly verified by scanning the QR-code, or have accepted an introduction for. Additionally, you can only introduce contacts for which you have directly scanned the conversation QR-code of. The application will let you know if you are trying to do something that is now allowed and will tell you how to remedy it.
+
+|  |  |
+| ------------- | ------------- |
+| ![](fig/Android-Initiate-Introduction.png)  | ![](fig/Android-Introduction-not-possible.png) |
+
+Once you have contacts that have a strong enough verification status, you will be able to choose which _QR Verified_ or _Strongly Verified_ contacts you want to introduce.
+
+ ![](fig/Android-introduce-contacts.png)
+
+ After someone sent you introductions, you can navigate to the management screen by tapping on their profile picture, then "Trusted Introductions". Here you can interact with the introductions that this contact has forwarded to you or navigate to the screen which shows all the introductions you have received.
+
+|  |  |  |
+| ------------- | ------------- | ------------- |
+| ![](fig/Android-conversation-view.png)  | ![](fig/Android-Navigate-Introductions.png) | ![](fig/Android-Manage-Introductions.png) |
+
+TODO: Rework when the last cosmetic changes have been added to the application (banner with direct navigation, additional navigation to introduction management screen, header for all screen...), also short paragraph on different introduction states? (e.g., when are they stale)
 
 #### **Move to a new version of the APK**
 
-TODO:
--> also investigate why reloading a backup gets rid of some verification states? Does it have to do with secure value recovery? It downgraded for some contacts (K) but not for others (A). Alternatively I may have a bug in my logic (I rejected an introduction at some point, maybe that mistakenly went back to manually verified instead of QR verified?)
+In this case, you will not need to export and import your data since you should be able to simply do an update with the new APK. We still recommend making sure that you have a working backup before you do this, in case something unexpectedly goes wrong. Follow the steps detailed at [**Backup your Signal Data**](#backup-your-signal-data) and [**Verify your backup**](#verify-your-backup) to make sure you have a fallback option.
+
+Now, download the newest version of the APK that is compatible with your smartphone (see - [**Which of the five files is right for my phone?**](#which-of-the-five-files-is-right-for-my-phone)), and open it. You may have to grant the "install unknown apps" permission as detailed in the [**TLDR;**](#tldr) chapter.
+
+|  |  |
+| ------------- | ------------- |
+| ![](fig/Android-APK-Upgrade.png)  | ![](fig/Android-APK-Upgrade-installed.png) |
 
 #### **Move back to a normal installation of Signal**
 
@@ -191,14 +224,14 @@ TODO: Could this be avoided by going through the playstore instead?
 
 The correct file will depend on the processor type that is in your smartphone. The different names denote different _instruction sets_ that a processor might use. Most commonly, Android phones use the ARM CPU architecture, more rarely, you might find an x86 architecture. 
 You can google for your processor and then find which CPU cores it contains.
-The more direct way is through a third party app, as this information is not commonly listed in the native Android settings. For example, [DevCheck](https://play.google.com/store/apps/details?id=flar2.devcheck) easily exposes what kind of CPUs the processor contains. 
+The more direct way is through a third party app, as this information is not commonly listed in the native Android settings. For example, [DevCheck](https://play.google.com/store/apps/details?id=flar2.devcheck) easily exposes what kind of CPU cores the processor contains. 
 After finding the type of CPU, you will still need to google for the instruction set.
 
 ### **Source Code**
-TODO
 
 #### **Android**
-TODO
+
+The source code for the modified Android application is [here](https://github.com/Cerenia/Signal-Android/tree/trusted-introductions). A good starting point for getting acquainted with the modifications is to start looking at the files in this [folder](https://github.com/Cerenia/Signal-Android/tree/trusted-introductions/app/src/main/java/org/thoughtcrime/securesms/trustedIntroductions).
 
 #### **Telemetry Server**
 TODO
