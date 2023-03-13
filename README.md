@@ -10,12 +10,15 @@ If you would like to join the upcoming Android user study or have other question
 
 ##  **Table of contents**
 
+- [**Trusted Introductions for the Signal private messenger**](#trusted-introductions-for-the-signal-private-messenger)
+  - [**Table of contents**](#table-of-contents)
   - [**Project Description**](#project-description)
   - [**Considerations before installing the application**](#considerations-before-installing-the-application)
   - [**Ressources**](#ressources)
     - [**HowTos**](#howtos)
       - [**Backup your Signal Data**](#backup-your-signal-data)
       - [**Verify your backup**](#verify-your-backup)
+      - [**Verify your PIN**](#verify-your-pin)
       - [**Transfer your Signal Data**](#transfer-your-signal-data)
         - [**Relink your connected devices**](#relink-your-connected-devices)
       - [**Use Trusted Introductions**](#use-trusted-introductions)
@@ -37,7 +40,7 @@ TODO
 ## **Considerations before installing the application**
 
 - This process will require creating and restoring from backups. To store the backups, your smartphone will need some free storage space (at least 2x as much as your Signal data is using).
-- dataloss may occur if backup process is not done correctly
+- dataloss may occur if the backup process is not done carefully.
 - if you have registration lock enabled, you MUST know your PIN before attempting to transfer your data or you may lock yourself out of your account for a week. If you don't know your PIN, disable registration lock and optionally reenable it while carefully saving your PIN.
 - telemetry data will be sent to researchers (TODO: not yet part of the APK)
 
@@ -75,7 +78,15 @@ Before installing the modified application make sure that you have a working bac
 | ------------- | ------------- | ------------- | ------------- |
 | ![](fig/Android-Create-Backup.png)  | ![](fig/Android-Backup-Passphrase-Verify.png)  | ![](fig/Android-Chat-Backup-passphrase-verify-correct.png)  | ![](fig/Android-Backup-Passphrase-Verify-wrong.png)   |
 
-Once you are certain that you have a working backup and passphrase, download the application and install it as described in the [Android Download](#android-download) section.
+#### **Verify your PIN**
+
+Be aware that if you have registration lock enabled, you MUST know your PIN before you uninstall the Signal application or you may temporarily lock yourself out of your account when restoring from backup. You can check if you have the correct PIN in the settings. Navigate to "Account", then turn on the PIN reminders if you don't have them turned on. Now, if you attempt to flip that switch again to turn them off, Signal will ask you to confirm your PIN. If you have the correct PIN you can move on, otherwise either change your PIN to a new one or you can turn off the PIN all together in the "Advanced PIN Settings".
+
+|  |  |  |  |
+| ------------- | ------------- | ------------- | ------------- |
+| ![](fig/Android-Account-Settings-Dark.jpg)  | ![](fig/Android-Account-Account-Settings.png)  | ![](fig/Android-Signal-Pin-Confirmation.png)  | ![](fig/Android-Advanced-PIN-settings.png)   |
+
+Once you are certain that you have a working backup and passphrase and that you know your PIN or the PIN is disabled, you can download the modified application and install it as described in the [Android Download](#android-download) section.
 
 #### **Transfer your Signal Data**
 Once you have successfully installed the APK you will need to load the data out of your backup into the modified application and reregister your mobile phone number with your account (and maybe your Signal PIN if you had registration lock enabled).
@@ -91,7 +102,7 @@ From there pick "Restore from backup", choose the backup file tap "Restore backu
 | ------------- | ------------- | ------------- | ------------- |
 | ![](fig/Android-Restore-from-Backup-nav.png)  | ![](fig/Android-Restore-from-Backup.png)  | ![](fig/Android-Restore-Progress.png)  | ![](fig/Android-Restore-Incorrect-Passphrase.png)   |
 
-After your data is loaded, you may set a folder to store backups in. It does not matter if you do this now or leave it for later when you want to transfer back to a normal installation of Signal. Afterwards, you will need to reregister with your phone number as you did when you first installed the Signal application. This is where you will need your PIN if you had registration lock enabled. Be careful here, as inputting your PIN wrong too many times will temporarily lock you out of your account.
+After your data is loaded, you may set a folder to store backups in. It does not matter if you do this now or leave it for later when you want to transfer back to a normal installation of Signal. Afterwards, you will need to reregister with your phone number as you did when you first installed the Signal application. This is where you will need your PIN if you had registration lock enabled. Be careful here, as inputting the wrong PIN too many times will temporarily lock you out of your account.
 
 |  |  |
 | ------------- | ------------- |
@@ -188,7 +199,7 @@ If the version of Signal you are running on your smartphone is newer than the Si
 
 ##### **TLDR;**
 
-Before doing anything, **make sure that you have backed up your chats before you do this, or you may loose all of your data irreversibly!** You can do this by following the instructions in chapters [**Backup your Signal Data**](#backup-your-signal-data) and [**Verify your backup**](#verify-your-backup).
+Before doing anything, **make sure that you have backed up your chats before you do this, or you may loose all of your data irreversibly!** You can do this by following the instructions in chapters [**Backup your Signal Data**](#backup-your-signal-data) and [**Verify your backup**](#verify-your-backup) and [**Verify your PIN**](#verify-your-pin).
 
 After having backed up and verified your data, you must uninstall your current version of Signal.
 
