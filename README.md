@@ -145,7 +145,7 @@ You will also notice that there are now more verification states, and that these
 - _**Strongly verified**_ indicating that you have scanned the QR code and accepted at least one introduction for this contact.
 
 You can initiate an introduction the same way you would forward a contact, in the menu which pops up when tapping the "+" in the conversation view.
-Please be aware that you can only introduce people to someone that you have either directly verified by scanning the QR-code, or have accepted an introduction for. Additionally, you can only introduce contacts for which you have directly scanned the conversation QR-code of. The application will let you know if you are trying to do something that is not allowed and will tell you how to remedy it.
+Please be aware that you can only introduce people to someone that you have either directly verified by scanning the conversation QR-code, or have accepted an introduction for. Additionally, you can only introduce contacts for which you have directly scanned the QR-code of your conversation. The application will let you know if you are trying to do something that is not allowed and will tell you how to remedy it.
 
 |  |  |
 | ------------- | ------------- |
