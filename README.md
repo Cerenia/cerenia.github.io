@@ -36,7 +36,7 @@ TODO
 
 ## **Considerations before installing the application**
 
-- This process will require creating and restoring from backups. To store the data, your smartphone will need some free storage space (at least 2x as much as your Signal data is using).
+- This process will require creating and restoring from backups. To store the backups, your smartphone will need some free storage space (at least 2x as much as your Signal data is using).
 - dataloss may occur if backup process is not done correctly
 - if you have registration lock enabled, you MUST know your PIN before attempting to transfer your data or you may lock yourself out of your account for a week. If you don't know your PIN, disable registration lock and optionally reenable it while carefully saving your PIN.
 - telemetry data will be sent to researchers (TODO: not yet part of the APK)
@@ -67,7 +67,7 @@ Once backups are turned on, you can force an immediate backup by tapping "Create
 
 Once the backup is completed, we suggest immediately copying it and storing a second copy somewhere, for example on your laptop.
 
-#### **Install the modified application**
+#### **Verify your backup**
 
 Before installing the modified application make sure that you have a working backup of your data and the corresponding passphrase. You can check that this is the case through the Signal application. Navigate to the "Chat backups" screen and tap "Verify backup passphrase", the application will let you know if you have the correct passphrase or not. If you don't succed, turn off backups and redo all the backup steps to create a new backup and passphrase.
 
@@ -131,24 +131,33 @@ TODO:
 
 #### **Move back to a normal installation of Signal**
 
-TODO:
+This process is very similar to what you did to move from a normal installation to the modified application. The only difference is that you will have two backup files to choose from. The one labeled with "trusted-introductions" is compatible with the modified application, while the file without this text is compatible with the normal Signal application. Both files are encrypted with the same passphrase. Simply follow the steps detailed in [**Backup your Signal Data**](#backup-your-signal-data) and [**Transfer your Signal Data**](#transfer-your-signal-data) again and make sure that you use the correct file when reloading from your backup. **If you try to import a "trusted-introductions" backup, the unmodified Signal application will crash, since it does not know how to handle the introductions and extended verification states. If this happens, reinstall the application and use the correct backup file when you try again.**
+The backup will collapse all the different verified states (QR Verified, Introduced, Strongly Verified or Manually Verified) to the single "verified" state.
 
 ### **Android Download**
-You can download the newest APK for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) . Your smartphone will warn you that the file may be harmful. This is because Android expects all applications to be downloaded via. the Google Play store. Since this is coming directly from us and not through the store, Google did not check the file for malicious code and hence you see the warning. It is safe to download the file anyway. 
+You can download the newest APKs for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) . When downloading the files, your smartphone will warn you that the file may be harmful. This is because Android expects all applications to be downloaded via. the Google Play store. Since this is coming directly from us and not through the store, Google did not check the file for malicious code and hence you see the warning. It is safe to download the file anyway. 
 
 ![](fig/may-be-harmful.jpg)
 
-#### **Which file is right for my phone?**
+Please be aware that Signal will not let you load a backup from an older version of Signal. So before you proceed, check the last version number against your version of Signal.
 
-TODO: Note somethinbg about backups only being restorable from older versions of signal + contact if someone is stuck. 
+You can find the version of Signal you are running by navigating to the "settings", and scrolling down and tapping on "Help", where the Version will be listed.
 
-TODO: Note that PIN must be known if it is enabled, otherwise peple can lock themselves out of the account.
+|  |  |  |
+| ------------- | ------------- | ------------- |
+| ![](fig/Android-Settings-Nav.jpg)  | ![](fig/Android-help-nav.jpg)  | ![](fig/Android-Help.jpg)  |
 
-TODO: If you are using Signal Desktop, you will loose your chat history on relinking the device.
+![](fig/APK-files.png)
+
+If the version of Signal you are running on your smartphone is newer than the Signal version of the APK, you must wait for the new APK to be uploaded. We synchronize regularly, but if you find yourself stuck because the newest APK has not been uploaded yet, feel free to [reach out and let us know](https://people.inf.ethz.ch/cgloor) so we can speed up the process.
+
+#### **Which of the five files is right for my phone?**
 
 ##### **TLDR;**
 
-First you must uninstall your current version of Signal, **make sure that you have backed up your chats before you do this, or you may loose all of your data irreversibly!**
+Before doing anything, **make sure that you have backed up your chats before you do this, or you may loose all of your data irreversibly!** You can do this by following the instructions in chapters [**Backup your Signal Data**](#backup-your-signal-data) and [**Verify your backup**](#verify-your-backup).
+
+After having backed up and verified your data, you must uninstall your current version of Signal.
 
 You can then simply try to install the files in the following order:
 1. _arm64_v8a_
