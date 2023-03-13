@@ -165,7 +165,11 @@ You can then simply try to install the files in the following order:
 3. (if your phone is very old, _armeabi-v7a_ or _x86_)
 4. if all else fails: _universal_, this should work with most phones but will use more storage
 
-TODO: allow unknown installs
+You will have to allow the application from which you access the APK (e.g., a browser or your file manager) to "install unknown apps" in the settings. To do this simply follow the banner to the settings and enable the option.
+
+|  |  |
+| ------------- | ------------- |
+| ![](fig/Android-install-unknown-sources-nav.png)  | ![](fig/Android-allow-unknown-sources.png)  | 
 
 If an installation fails, your phone will simply tell you that Signal could not be installed and you can move to the next file.
 
@@ -173,9 +177,14 @@ If an installation fails, your phone will simply tell you that Signal could not 
 | ------------- | ------------- | ------------- |
 | ![](fig/want-install.jpg)  | ![](fig/installing.jpg)  | ![](fig/not-installed.jpg)  |
 
-TODO: revert allow unknown installs afterwards
+We recommend retracting the "Install unknown apps" permission as soon as your installation is done. To do this search for "Install unknown apps" in the settings, navigate to the application you used to access the APK and remove the permission by flipping the switch again.
+
+|  |  |  |  |
+| ------------- | ------------- |------------- |------------- |
+| ![](fig/Android-search-settings.png)  | ![](fig/Android-install-unknown-apps-search-text.png)  | ![](fig/Android-install-unknown-apps-settings-nav.png)  | ![](fig/Android-Install-Unknown-Apps.png)  | 
 
 It is possible that none of the installers work for your device. In that case you will unfortunately not be able to participate in the study.
+
 TODO: Could this be avoided by going through the playstore instead?
 
 ##### **More information**
