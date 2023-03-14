@@ -86,48 +86,6 @@ Be aware that if you have registration lock enabled, you MUST know your PIN befo
 
 Once you are certain that you have a working backup and passphrase and that you know your PIN or the PIN is disabled, you can download the modified application and install it as described in the [**Install the modified application**](#install-the-modified-application) section.
 
-#### **Transfer your Signal Data**
-Once you have successfully installed the APK you will need to load the data out of your backup into the modified application and reregister your mobile phone number with your account (and maybe input your Signal PIN if it was enabled).
-When opening the modified application for the first time, give it the permissions it needs to function like you did when installing the unmodified Signal application, and navigate to "Transfer or restore account".
-
-|  |  |  |  |
-| ------------- | ------------- | ------------- | ------------- |
-| ![](fig/Android-Transfer-Account-Nav.png)  | ![](fig/Android-Signal-Permissions_1.png)  | ![](fig/Android-Signal-Permissions_2.png)  | ![](fig/Android-Signal-Permissions_3.png)   |
-
-From there pick "Restore from backup", choose the backup file tap "Restore backup" and input your passphrase. If you have the correct passphrase, a progress indicator will appear. If you make a mistake the application will tell you and you can try again.
-
-|  |  |  |  |
-| ------------- | ------------- | ------------- | ------------- |
-| ![](fig/Android-Restore-from-Backup-nav.png)  | ![](fig/Android-Restore-from-Backup.png)  | ![](fig/Android-Restore-Progress.png)  | ![](fig/Android-Restore-Incorrect-Passphrase.png)   |
-
-After your data is loaded, you may set a folder to store backups in. It does not matter if you do this now or leave it for later when you want to transfer back to a normal installation of Signal. Afterwards, you will need to reregister with your phone number as you did when you first installed the Signal application. This is where you may need your PIN. Be careful here if you had registration lock enabled, as inputting the wrong PIN too many times will temporarily lock you out of your account.
-
-|  |  |
-| ------------- | ------------- |
-| ![](fig/Android-Backup-Folder.png)  | ![](fig/Android-Enter-Phone-Nr.png)  |
-
-##### **Relink your connected devices**
-
- If you used the Signal desktop client, you will notice that it is no longer linked to your account after restoring the backup. In order to relink your device, you will need close the desktop application and reopen for the "Unlinked" banner to appear. **Note: it may take some time after you loaded your backup into your mobile phone and more than one restart of the desktop application for this banner to appear.**
-
- |  |  |
-| ------------- | ------------- |
-| ![](fig/Desktop-Message-After-Restore.png)  | ![](fig/Desktop-unlinked-banner.png)  |
-
-In your smartphone, navigate to the "settings" and "Linked devices" and tap the + icon to scan the code on your desktop and link the devices again. 
-
-|  |  |  |
-| ------------- | ------------- | ------------- |
-| ![](fig/Android-Settings-Nav.jpg)  | ![](fig/Android-Account-Settings-Dark.jpg)  | ![](fig/Android-No-Devices-Linked.jpg)  |
-
-After scanning the code the desktop client will display a progress bar until the synchronisation is complete. 
-
-
-|  |  |
-| ------------- | ------------- |
-| ![](fig/Desktop-QR.png)  | ![](fig/Desktop-sync.png) |
-
-
 #### **Install the modified application**
 You can download the newest APKs for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) . When downloading the files, your smartphone will warn you that the file may be harmful. This is because Android expects all applications to be downloaded via. the Google PlayStore. Since this is coming directly from us and not through the store, Google did not check the file for malicious code and hence you see the warning. It is safe to download the file anyway. 
 
@@ -187,6 +145,48 @@ The correct file will depend on the processor type that is in your smartphone. T
 You can google for your processor and then find which CPU cores it contains.
 The more direct way is through a third party app, as this information is not commonly listed in the native Android settings. For example, [DevCheck](https://play.google.com/store/apps/details?id=flar2.devcheck) easily exposes what kind of CPU cores the processor contains. 
 After finding the type of CPU, you will still need to google for the instruction set.
+
+
+#### **Transfer your Signal Data**
+Once you have successfully installed the APK you will need to load the data out of your backup into the modified application and reregister your mobile phone number with your account (and maybe input your Signal PIN if it was enabled).
+When opening the modified application for the first time, give it the permissions it needs to function like you did when installing the unmodified Signal application, and navigate to "Transfer or restore account".
+
+|  |  |  |  |
+| ------------- | ------------- | ------------- | ------------- |
+| ![](fig/Android-Transfer-Account-Nav.png)  | ![](fig/Android-Signal-Permissions_1.png)  | ![](fig/Android-Signal-Permissions_2.png)  | ![](fig/Android-Signal-Permissions_3.png)   |
+
+From there pick "Restore from backup", choose the backup file tap "Restore backup" and input your passphrase. If you have the correct passphrase, a progress indicator will appear. If you make a mistake the application will tell you and you can try again.
+
+|  |  |  |  |
+| ------------- | ------------- | ------------- | ------------- |
+| ![](fig/Android-Restore-from-Backup-nav.png)  | ![](fig/Android-Restore-from-Backup.png)  | ![](fig/Android-Restore-Progress.png)  | ![](fig/Android-Restore-Incorrect-Passphrase.png)   |
+
+After your data is loaded, set a folder to store future backups in. Afterwards, you will need to reregister with your phone number as you did when you first installed the Signal application. This is where you may need your PIN. Be careful here if you had registration lock enabled, as inputting the wrong PIN too many times will temporarily lock you out of your account.
+
+|  |  |
+| ------------- | ------------- |
+| ![](fig/Android-Backup-Folder.png)  | ![](fig/Android-Enter-Phone-Nr.png)  |
+
+##### **Relink your connected devices**
+
+ If you used the Signal desktop client, you will notice that it is no longer linked to your account after restoring the backup. In order to relink your device, you will need close the desktop application and reopen for the "Unlinked" banner to appear. **Note: it may take some time after you loaded your backup into your mobile phone and more than one restart of the desktop application for this banner to appear.**
+
+ |  |  |
+| ------------- | ------------- |
+| ![](fig/Desktop-Message-After-Restore.png)  | ![](fig/Desktop-unlinked-banner.png)  |
+
+In your smartphone, navigate to the "settings" and "Linked devices" and tap the + icon to scan the code on your desktop and link the devices again. 
+
+|  |  |  |
+| ------------- | ------------- | ------------- |
+| ![](fig/Android-Settings-Nav.jpg)  | ![](fig/Android-Account-Settings-Dark.jpg)  | ![](fig/Android-No-Devices-Linked.jpg)  |
+
+After scanning the code the desktop client will display a progress bar until the synchronisation is complete. 
+
+
+|  |  |
+| ------------- | ------------- |
+| ![](fig/Desktop-QR.png)  | ![](fig/Desktop-sync.png) |
 
 
 #### **Use Trusted Introductions**
