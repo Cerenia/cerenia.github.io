@@ -10,8 +10,6 @@ If you would like to join the upcoming Android user study or have other question
 
 ##  **Table of contents**
 
-- [**Trusted Introductions for the Signal private messenger**](#trusted-introductions-for-the-signal-private-messenger)
-  - [**Table of contents**](#table-of-contents)
   - [**Project Description**](#project-description)
   - [**Considerations before installing the application**](#considerations-before-installing-the-application)
   - [**Ressources**](#ressources)
@@ -21,13 +19,13 @@ If you would like to join the upcoming Android user study or have other question
       - [**Verify your PIN**](#verify-your-pin)
       - [**Transfer your Signal Data**](#transfer-your-signal-data)
         - [**Relink your connected devices**](#relink-your-connected-devices)
+      - [**Install the modified application**](#install-the-modified-application)
+        - [**Which of the five files is right for my phone?**](#which-of-the-five-files-is-right-for-my-phone)
+          - [**TLDR;**](#tldr)
+          - [**More information**](#more-information)
       - [**Use Trusted Introductions**](#use-trusted-introductions)
       - [**Move to a new version of the APK**](#move-to-a-new-version-of-the-apk)
       - [**Move back to a normal installation of Signal**](#move-back-to-a-normal-installation-of-signal)
-    - [**Android Download**](#android-download)
-      - [**Which of the five files is right for my phone?**](#which-of-the-five-files-is-right-for-my-phone)
-        - [**TLDR;**](#tldr)
-        - [**More information**](#more-information)
     - [**Source Code**](#source-code)
       - [**Android**](#android)
       - [**Telemetry Server**](#telemetry-server)
@@ -86,7 +84,7 @@ Be aware that if you have registration lock enabled, you MUST know your PIN befo
 | ------------- | ------------- | ------------- | ------------- |
 | ![](fig/Android-Account-Settings-Dark.jpg)  | ![](fig/Android-Account-Account-Settings.png)  | ![](fig/Android-Signal-Pin-Confirmation.png)  | ![](fig/Android-Advanced-PIN-settings.png)   |
 
-Once you are certain that you have a working backup and passphrase and that you know your PIN or the PIN is disabled, you can download the modified application and install it as described in the [Android Download](#android-download) section.
+Once you are certain that you have a working backup and passphrase and that you know your PIN or the PIN is disabled, you can download the modified application and install it as described in the [**Install the modified application**](#install-the-modified-application) section.
 
 #### **Transfer your Signal Data**
 Once you have successfully installed the APK you will need to load the data out of your backup into the modified application and reregister your mobile phone number with your account (and maybe input your Signal PIN if it was enabled).
@@ -128,6 +126,67 @@ After scanning the code the desktop client will display a progress bar until the
 |  |  |
 | ------------- | ------------- |
 | ![](fig/Desktop-QR.png)  | ![](fig/Desktop-sync.png) |
+
+
+#### **Install the modified application**
+You can download the newest APKs for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) . When downloading the files, your smartphone will warn you that the file may be harmful. This is because Android expects all applications to be downloaded via. the Google PlayStore. Since this is coming directly from us and not through the store, Google did not check the file for malicious code and hence you see the warning. It is safe to download the file anyway. 
+
+![](fig/may-be-harmful.jpg)
+
+Please be aware that Signal will not let you load a backup from an older version of Signal. So before you proceed, check the last version number against your version of Signal.
+
+You can find the version of Signal you are running by navigating to the "settings", and scrolling down and tapping on "Help", where the Version will be listed.
+
+|  |  |  |
+| ------------- | ------------- | ------------- |
+| ![](fig/Android-Settings-Nav.jpg)  | ![](fig/Android-help-nav.jpg)  | ![](fig/Android-Help.jpg)  |
+
+![](fig/APK-files.png)
+
+If the version of Signal you are running on your smartphone is newer than the Signal version of the APK, you must wait for the new APK to be uploaded. We synchronize regularly, but if you find yourself stuck because the newest APK has not been uploaded yet, feel free to [reach out and let us know](https://people.inf.ethz.ch/cgloor) so we can speed up the process.
+
+##### **Which of the five files is right for my phone?**
+
+###### **TLDR;**
+
+Before doing anything, **make sure that you have backed up your chats, or you may loose all of your data irreversibly!** You can do this by following the instructions in chapters [**Backup your Signal Data**](#backup-your-signal-data) and [**Verify your backup**](#verify-your-backup) and [**Verify your PIN**](#verify-your-pin).
+
+After having backed up and verified your data, you must uninstall your current version of Signal.
+
+You can then simply try to install the files in the following order:
+1. _arm64_v8a_
+2. _x86_64_
+3. (if your phone is very old, _armeabi-v7a_ or _x86_)
+4. if all else fails: _universal_, this should work with most phones but will use more storage
+
+You will have to allow the application from which you access the APK (e.g., a browser or your file manager) to "install unknown apps" in the settings. To do this simply follow the banner to the settings and enable the option.
+
+|  |  |
+| ------------- | ------------- |
+| ![](fig/Android-install-unknown-sources-nav.png)  | ![](fig/Android-allow-unknown-sources.png)  | 
+
+If an installation fails, your phone will simply tell you that Signal could not be installed and you can move to the next file.
+
+|  |  |  |
+| ------------- | ------------- | ------------- |
+| ![](fig/want-install.jpg)  | ![](fig/installing.jpg)  | ![](fig/not-installed.jpg)  |
+
+We recommend retracting the "Install unknown apps" permission as soon as your installation is done. To do this search for "Install unknown apps" in the settings, navigate to the application you used to access the APK and remove the permission by flipping the switch again.
+
+|  |  |  |  |
+| ------------- | ------------- |------------- |------------- |
+| ![](fig/Android-search-settings.png)  | ![](fig/Android-install-unknown-apps-search-text.png)  | ![](fig/Android-install-unknown-apps-settings-nav.png)  | ![](fig/Android-Install-Unknown-Apps.png)  | 
+
+It is possible that none of the installers work for your device. In that case you will unfortunately not be able to participate in the study.
+
+TODO: Could this be avoided by going through the playstore instead?
+
+###### **More information**
+
+The correct file will depend on the processor type that is in your smartphone. The different names denote different _instruction sets_ that a processor might use. Most commonly, Android phones use the ARM CPU architecture, more rarely, you might find an x86 architecture. 
+You can google for your processor and then find which CPU cores it contains.
+The more direct way is through a third party app, as this information is not commonly listed in the native Android settings. For example, [DevCheck](https://play.google.com/store/apps/details?id=flar2.devcheck) easily exposes what kind of CPU cores the processor contains. 
+After finding the type of CPU, you will still need to google for the instruction set.
 
 
 #### **Use Trusted Introductions**
@@ -179,66 +238,6 @@ Now, download the newest version of the APK that is compatible with your smartph
 
 This process is very similar to what you did to move from a normal installation to the modified application. The only difference is that you will have two backup files to choose from. The one labeled with "trusted-introductions" is compatible with the modified application, while the file without this text is compatible with the normal Signal application. Both files are encrypted with the same passphrase. Follow the steps detailed in [**Backup your Signal Data**](#backup-your-signal-data), [**Verify your PIN**](#verify-your-pin) and [**Transfer your Signal Data**](#transfer-your-signal-data) again and make sure that you use the correct file when reloading from your backup. **If you try to import a "trusted-introductions" backup, the unmodified Signal application will crash, since it does not know how to handle the introductions and extended verification states. If this happens, uninstall and reinstall the application from the PlayStore and use the correct backup file when you try again.**
 The backup will collapse all the different verified states (_QR Verified_, _Introduced_, _Strongly Verified_ or _Manually Verified_) to the single "verified" state in the original application.
-
-### **Android Download**
-You can download the newest APKs for Android smartphones [here](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC) . When downloading the files, your smartphone will warn you that the file may be harmful. This is because Android expects all applications to be downloaded via. the Google PlayStore. Since this is coming directly from us and not through the store, Google did not check the file for malicious code and hence you see the warning. It is safe to download the file anyway. 
-
-![](fig/may-be-harmful.jpg)
-
-Please be aware that Signal will not let you load a backup from an older version of Signal. So before you proceed, check the last version number against your version of Signal.
-
-You can find the version of Signal you are running by navigating to the "settings", and scrolling down and tapping on "Help", where the Version will be listed.
-
-|  |  |  |
-| ------------- | ------------- | ------------- |
-| ![](fig/Android-Settings-Nav.jpg)  | ![](fig/Android-help-nav.jpg)  | ![](fig/Android-Help.jpg)  |
-
-![](fig/APK-files.png)
-
-If the version of Signal you are running on your smartphone is newer than the Signal version of the APK, you must wait for the new APK to be uploaded. We synchronize regularly, but if you find yourself stuck because the newest APK has not been uploaded yet, feel free to [reach out and let us know](https://people.inf.ethz.ch/cgloor) so we can speed up the process.
-
-#### **Which of the five files is right for my phone?**
-
-##### **TLDR;**
-
-Before doing anything, **make sure that you have backed up your chats, or you may loose all of your data irreversibly!** You can do this by following the instructions in chapters [**Backup your Signal Data**](#backup-your-signal-data) and [**Verify your backup**](#verify-your-backup) and [**Verify your PIN**](#verify-your-pin).
-
-After having backed up and verified your data, you must uninstall your current version of Signal.
-
-You can then simply try to install the files in the following order:
-1. _arm64_v8a_
-2. _x86_64_
-3. (if your phone is very old, _armeabi-v7a_ or _x86_)
-4. if all else fails: _universal_, this should work with most phones but will use more storage
-
-You will have to allow the application from which you access the APK (e.g., a browser or your file manager) to "install unknown apps" in the settings. To do this simply follow the banner to the settings and enable the option.
-
-|  |  |
-| ------------- | ------------- |
-| ![](fig/Android-install-unknown-sources-nav.png)  | ![](fig/Android-allow-unknown-sources.png)  | 
-
-If an installation fails, your phone will simply tell you that Signal could not be installed and you can move to the next file.
-
-|  |  |  |
-| ------------- | ------------- | ------------- |
-| ![](fig/want-install.jpg)  | ![](fig/installing.jpg)  | ![](fig/not-installed.jpg)  |
-
-We recommend retracting the "Install unknown apps" permission as soon as your installation is done. To do this search for "Install unknown apps" in the settings, navigate to the application you used to access the APK and remove the permission by flipping the switch again.
-
-|  |  |  |  |
-| ------------- | ------------- |------------- |------------- |
-| ![](fig/Android-search-settings.png)  | ![](fig/Android-install-unknown-apps-search-text.png)  | ![](fig/Android-install-unknown-apps-settings-nav.png)  | ![](fig/Android-Install-Unknown-Apps.png)  | 
-
-It is possible that none of the installers work for your device. In that case you will unfortunately not be able to participate in the study.
-
-TODO: Could this be avoided by going through the playstore instead?
-
-##### **More information**
-
-The correct file will depend on the processor type that is in your smartphone. The different names denote different _instruction sets_ that a processor might use. Most commonly, Android phones use the ARM CPU architecture, more rarely, you might find an x86 architecture. 
-You can google for your processor and then find which CPU cores it contains.
-The more direct way is through a third party app, as this information is not commonly listed in the native Android settings. For example, [DevCheck](https://play.google.com/store/apps/details?id=flar2.devcheck) easily exposes what kind of CPU cores the processor contains. 
-After finding the type of CPU, you will still need to google for the instruction set.
 
 ### **Source Code**
 
