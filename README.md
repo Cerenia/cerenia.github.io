@@ -256,6 +256,6 @@ TODO
 
 The commit history on Github has a more finegraned list of changes.
 
-##### **1.3.0:**
+##### **1.1.0.0:**
 - Fixed erroneous datatype and removed unneccessary constraint in Introductions Database. **=> Requires a fresh installation instead of an upgrade for the changes to take effect (back up your data first).**
 
