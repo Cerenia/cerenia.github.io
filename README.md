@@ -247,3 +247,15 @@ The source code for the modified Android application is [here](https://github.co
 
 #### **Telemetry Server**
 TODO
+
+### **Newest APK download & Change Log**
+
+[APKs](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC)
+
+#### **Change Log**
+
+The commit history on Github has a more finegraned list of changes.
+
+##### **1.3.0:**
+- Fixed erroneous datatype and removed unneccessary constraint in Introductions Database. **=> Requires a fresh installation instead of an upgrade for the changes to take effect (back up your data first).**
+
