@@ -252,6 +252,8 @@ TODO
 
 [APKs](https://polybox.ethz.ch/index.php/s/K9mgiDihWqj9dIC)
 
+You can check which version of the Trusted Introductions APK you are currently running by navigating to "Settings" -> "Help".
+
 #### **Change Log**
 
 The commit history on Github has a more finegraned list of changes.
