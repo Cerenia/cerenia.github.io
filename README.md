@@ -17,18 +17,21 @@ If you would like to join the upcoming Android user study or have other question
       - [**Backup your Signal Data**](#backup-your-signal-data)
       - [**Verify your backup**](#verify-your-backup)
       - [**Verify your PIN**](#verify-your-pin)
-      - [**Transfer your Signal Data**](#transfer-your-signal-data)
-        - [**Relink your connected devices**](#relink-your-connected-devices)
       - [**Install the modified application**](#install-the-modified-application)
         - [**Which of the five files is right for my phone?**](#which-of-the-five-files-is-right-for-my-phone)
           - [**TLDR;**](#tldr)
           - [**More information**](#more-information)
+      - [**Transfer your Signal Data**](#transfer-your-signal-data)
+        - [**Relink your connected devices**](#relink-your-connected-devices)
       - [**Use Trusted Introductions**](#use-trusted-introductions)
       - [**Move to a new version of the APK**](#move-to-a-new-version-of-the-apk)
       - [**Move back to a normal installation of Signal**](#move-back-to-a-normal-installation-of-signal)
     - [**Source Code**](#source-code)
       - [**Android**](#android)
       - [**Telemetry Server**](#telemetry-server)
+    - [**Newest APK download \& Change Log**](#newest-apk-download--change-log)
+      - [**Change Log**](#change-log)
+        - [**1.1.0.1:**](#1101)
 
 
 
@@ -40,6 +43,7 @@ TODO
 - This process will require creating and restoring from backups. To store the backups, your smartphone will need some free storage space (at least 2x as much as your Signal data is using).
 - dataloss may occur if the backup process is not done carefully.
 - if you have registration lock enabled, you MUST know your PIN before attempting to transfer your data or you may lock yourself out of your account for a week. If you don't know your PIN, disable registration lock and optionally reenable it while carefully saving your PIN.
+- if you have been using Signal together with a linked desktop application, it may take a while until you can relink the desktop application. Messages exchanged while the desktop was not linked will not synchronize, but you will not loose your history if you follow the instructions. 
 - telemetry data will be sent to researchers (TODO: not yet part of the APK)
 
 ## **Ressources**
@@ -169,7 +173,7 @@ After your data is loaded, set a folder to store future backups in. Afterwards, 
 
 ##### **Relink your connected devices**
 
- If you used the Signal desktop client, you will notice that it is no longer linked to your account after restoring the backup. In order to relink your device, you will need close the desktop application and reopen for the "Unlinked" banner to appear. **Note: it may take some time after you loaded your backup into your mobile phone and more than one restart of the desktop application for this banner to appear.**
+ If you used the Signal desktop client, you will notice that it is no longer linked to your account after restoring the backup. In order to relink your device, you will need close the desktop application and reopen for the "Unlinked" banner to appear. **Note: it may a significant amount of time after you loaded your backup into your mobile phone and more than one restart of the desktop application for this banner to appear.**
 
  |  |  |
 | ------------- | ------------- |
@@ -226,7 +230,7 @@ TODO: What about in app updates?
 
 #### **Move to a new version of the APK**
 
-In this case, you will not need to export and import your data since you can simply do an update with the new APK. We still recommend making sure that you have a working backup before you do this, in case something unexpectedly goes wrong. Follow the steps detailed at [**Backup your Signal Data**](#backup-your-signal-data), [**Verify your backup**](#verify-your-backup) and [**Verify your PIN**](#verify-your-pin) to make sure you have a fallback option available.
+In this case, you will generally not need to export and import your data since you can simply do an update with the new APK. Check [**Newest APK download \& Change Log**](#newest-apk-download--change-log) to make sure that this is the case for the version you are trying to update to as some changes are breaking and will need you to backup, uninstall and reinstall. We still recommend making sure that you have a working backup before you do this, in case something unexpectedly goes wrong. Follow the steps detailed at [**Backup your Signal Data**](#backup-your-signal-data), [**Verify your backup**](#verify-your-backup) and [**Verify your PIN**](#verify-your-pin) to make sure you have a fallback option available.
 
 Now, download the newest version of the APK that is compatible with your smartphone (see - [**Which of the five files is right for my phone?**](#which-of-the-five-files-is-right-for-my-phone)), and open it. You may have to grant the "install unknown apps" permission as detailed in the [**TLDR;**](#tldr) chapter.
 
