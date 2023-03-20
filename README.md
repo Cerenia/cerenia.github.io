@@ -1,3 +1,7 @@
+<body>
+
+<h1 id="hello-world">hello world</h1>
+
 # **Trusted Introductions for the Signal private messenger**
 
 Welcome!
@@ -265,3 +269,5 @@ The commit history on Github has a more finegraned list of changes.
 ##### **1.1.0.1:**
 - Checking for stale introductions before updating on security nr. change.
 - Fixed erroneous datatype and removed unneccessary constraint in Introductions Database. **=> Requires a fresh installation instead of an upgrade for the changes to take effect (back up your data first).**
+
+<body\>
