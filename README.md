@@ -6,7 +6,7 @@ This page is your point of entry for the research project building Trusted Intro
 
 This project is executed at the [Network Security group](https://netsec.ethz.ch/) of ETH Zürich and funded by the Werner Siemens Foundation through the [Centre for Cyber Trust](https://cyber-trust.org/).
 
-If you want to submit feedback or have questions about the project, feel free to get in touch with the [PI](https://people.inf.ethz.ch/cgloor) directly or to fill out our [form](https://cerenia.github.io/../../pages/feedback/feedback.html) .
+If you want to submit feedback or have questions about the project, feel free to get in touch with the [PI](https://people.inf.ethz.ch/cgloor) directly or to fill out our [form](/pages/feedback/feedback.html) .
 
 ##  **Table of contents**
 
