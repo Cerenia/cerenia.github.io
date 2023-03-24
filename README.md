@@ -10,7 +10,6 @@ If you want to submit feedback or have questions about the project, feel free to
 
 ##  **Table of contents**
 
-  - [**Project Description**](#project-description)
   - [**Considerations before installing the application**](#considerations-before-installing-the-application)
   - [**Ressources**](#ressources)
     - [**HowTos**](#howtos)
@@ -35,16 +34,13 @@ If you want to submit feedback or have questions about the project, feel free to
 
 
 
-## **Project Description**
-TODO
-
 ## **Considerations before installing the application**
 
 - This process will require creating and restoring from backups. To store the backups, your smartphone will need some free storage space (at least 2x as much as your Signal data is using).
 - dataloss may occur if the backup process is not done carefully.
 - if you have registration lock enabled, you MUST know your PIN before attempting to transfer your data or you may lock yourself out of your account for a week. If you don't know your PIN, disable registration lock and optionally reenable it while carefully saving your PIN.
 - if you have been using Signal together with a linked desktop application, it may take a while until you can relink the desktop application. Messages exchanged while the desktop was not linked will not synchronize, but you will not loose your history if you follow the instructions. 
-- telemetry data will be sent to researchers (TODO: not yet part of the APK)
+- while some telemetric measurements is planned for an upcoming study, the current APK **do not** contain any telemetry.
 
 ## **Ressources**
 
@@ -141,8 +137,6 @@ We recommend retracting the "Install unknown apps" permission as soon as your in
 
 It is possible that none of the installers work for your device. In that case you will unfortunately not be able to participate in the study.
 
-TODO: Could this be avoided by going through the playstore instead?
-
 ###### **More information**
 
 The correct file will depend on the processor type that is in your smartphone. The different names denote different _instruction sets_ that a processor might use. Most commonly, Android phones use the ARM CPU architecture, more rarely, you might find an x86 architecture. 
@@ -224,9 +218,6 @@ Once you have contacts that have a strong enough verification state, you will be
 | ------------- | ------------- | ------------- |
 | ![](fig/Android-conversation-view.png)  | ![](fig/Android-Navigate-Introductions.png) | ![](fig/Android-Manage-Introductions.png) |
 
-TODO: Rework when the last cosmetic changes have been added to the application (banner with direct navigation, additional navigation to introduction management screen, header for all screen...), also short paragraph on different introduction states? (e.g., when are they stale)
-
-TODO: What about in app updates? 
 
 #### **Move to a new version of the APK**
 
@@ -250,7 +241,7 @@ The backup will collapse all the different verified states (_QR Verified_, _Intr
 The source code for the modified Android application is [here](https://github.com/Cerenia/Signal-Android/tree/trusted-introductions). A good starting point for getting acquainted with the modifications is to start looking at the files in this [folder](https://github.com/Cerenia/Signal-Android/tree/trusted-introductions/app/src/main/java/org/thoughtcrime/securesms/trustedIntroductions).
 
 #### **Telemetry Server**
-TODO
+WIP
 
 ### **Newest APK download & Change Log**
 
@@ -262,7 +253,7 @@ You can check which version of the Trusted Introductions APK you are currently r
 
 The commit history on Github has a more finegraned list of changes.
 
-##### **1.1.0.1:**
+##### **2.0.0:**
 - Checking for stale introductions before updating on security nr. change.
 - Fixed erroneous datatype and removed unneccessary constraint in Introductions Database. **=> Requires a fresh installation instead of an upgrade for the changes to take effect (back up your data first).**
 
