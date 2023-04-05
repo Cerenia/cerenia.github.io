@@ -248,7 +248,7 @@ The source code for the modified Android application is [here](https://github.co
 
 When you install the modified Signal application you will be prompted to register with the telemetry server by providing a random word or string (salt). This value will be concatenated to your Signal user ID and hashed. The hash will be the pseudonym used to reidentify the same users without allowing the researchers to deanonymize the users. 
 The pseudonym, and the salt will be listed in the applications help page, where you can also find the current version. 
-If you ever opt to terminate your involvement with the study, you may request the deletion of your data using this [form](/pages/study/delete_data_form.html).
+If you ever opt to terminate your involvement with the study, you may request the deletion of your data using this [form](/pages/study/delete_data_form.html). Please consider providing the reason for aborting the study. This helps us reason about missing datapoints and what biases it may introduce to our data. 
 
 Rest still TODO:
 WIP
