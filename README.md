@@ -42,7 +42,7 @@ If you want to submit feedback or have questions about the project, feel free to
 - dataloss may occur if the backup process is not done carefully.
 - if you have registration lock enabled, you MUST know your PIN before attempting to transfer your data or you may lock yourself out of your account for a week. If you don't know your PIN, disable registration lock and optionally reenable it while carefully saving your PIN.
 - if you have been using Signal together with a linked desktop application, it may take a while until you can relink the desktop application. Messages exchanged while the desktop was not linked will not synchronize, but you will not loose your history if you follow the instructions. 
-- while some telemetric measurements is planned for an upcoming study, the current APK **do not** contain any telemetry.
+- while some telemetric measurements are planned for an upcoming study, the current APKs **do not** contain any kind of telemetry.
 
 ## **Ressources**
 
