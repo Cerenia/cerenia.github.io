@@ -8,6 +8,8 @@ This project is executed at the [Network Security group](https://netsec.ethz.ch/
 
 If you want to submit feedback or have questions about the project, feel free to get in touch with the [project lead](https://people.inf.ethz.ch/cgloor) directly or to fill out our [form](/pages/feedback/feedback.html) .
 
+For participants of the Android user study, you can fin the information sheet [here](/pages/study/participant_information.pdf).
+
 ##  **Table of contents**
 
   - [**Considerations before installing the application**](#considerations-before-installing-the-application)
@@ -241,6 +243,14 @@ The backup will collapse all the different verified states (_QR Verified_, _Intr
 The source code for the modified Android application is [here](https://github.com/Cerenia/Signal-Android/tree/trusted-introductions). A good starting point for getting acquainted with the modifications is to start looking at the files in this [folder](https://github.com/Cerenia/Signal-Android/tree/trusted-introductions/app/src/main/java/org/thoughtcrime/securesms/trustedIntroductions).
 
 #### **Telemetry Server**
+
+(This is meant for the future Android study, there will never be any telemetry in the APK outside of this timeperiod) 
+
+When you install the modified Signal application you will be prompted to register with the telemetry server by providing a random word or string (salt). This value will be concatenated to your Signal user ID and hashed. The hash will be the pseudonym used to reidentify the same users without allowing the researchers to deanonymize the users. 
+The pseudonym, and the salt will be listed in the applications help page, where you can also find the current version. 
+If you ever opt to terminate your involvement with the study, you may request the deletion of your data using this [form](/pages/study/delete_data_form.html).
+
+Rest still TODO:
 WIP
 
 ### **Newest APK download & Change Log**
